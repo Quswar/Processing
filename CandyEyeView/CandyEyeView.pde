@@ -26,4 +26,10 @@ void draw()
   {
     yDelta=-yDelta;
   }
+  if (mousePressed)
+  {
+    frameRate(0);
+    delay(100);
+    frameRate(5000);
+   }
 }
