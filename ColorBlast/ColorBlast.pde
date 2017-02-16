@@ -6,13 +6,13 @@ float yDelta=15;
 
 void setup()
 {
-  size(1080,720);
+  /*size(1080,720);*/fullScreen();
   background(100,200,150);
   frameRate(5000);
 }
 void draw()
 {
-  for (int i=0;i<1000;i++)
+  for (int i=0;i<100;i++)
   {
     Draw();
   }

@@ -6,7 +6,7 @@ float yDelta=15;
 
 void setup()
 {
-  size(1080,720);
+  /*size(1080,720);*/fullScreen();
   background(100,200,150);
   frameRate(5000);
 }
