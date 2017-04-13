@@ -16,7 +16,7 @@ void setup ()
   //window2=createFont("Arial",12,true);
 
 //  printArray(Serial.list());
-  myPort = new Serial(this,"COM4", 9600);
+  myPort = new Serial(this,"COM3", 9600);
 
   myPort.bufferUntil('\n');
 
