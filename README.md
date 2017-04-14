@@ -1,2 +1,2 @@
 # Processing
-This repo contains all the sketches I've been working on, related to Processing.
+This repository contains all the Processing sketches I've been playing with!
