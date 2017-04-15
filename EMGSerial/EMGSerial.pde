@@ -1,7 +1,7 @@
 import processing.serial.*; 
 
 Serial myPort;        // The serial port
-int xPos = 1;         // horizontal position of the graph
+float xPos = 1;         // horizontal position of the graph
 float inByte=0;
 //float[] inByte_img =new float [16];
 String inString;
@@ -10,13 +10,14 @@ String inString;
 
 void setup ()
 {
-  // set the window size:
+  //fullScreen();
+   //set the window size:
   size(800, 600);
   //window1=createFont("Arial",12,true);
   //window2=createFont("Arial",12,true);
 
 //  printArray(Serial.list());
-  myPort = new Serial(this,"COM3", 9600);
+  myPort = new Serial(this,"COM4", 9600);
 
   myPort.bufferUntil('\n');
 
@@ -41,7 +42,12 @@ void draw ()
   }
   convert();
  
-  stroke(10);
+  stroke(0);
+  line(0,height/2,width,height/2);
+  
+  stroke(50);
+  
+  
   //println(inByte_real[z]);
   line(xPos-1, prev, xPos, height-inByte);
   prev=height-inByte;
@@ -60,7 +66,7 @@ void convert()
      // convert to an int and map to the screen height:
      inByte= int(inString);
      println(inByte);
-     inByte = map(inByte, 0, 1023, 0, height);
+     inByte = map(inByte, -12, 12, 0, height);
     }
 }
 
