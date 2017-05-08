@@ -12,7 +12,7 @@ void setup ()
 {
   //fullScreen();
    //set the window size:
-  size(800, 600);
+  size(1280, 600);
   //window1=createFont("Arial",12,true);
   //window2=createFont("Arial",12,true);
 
@@ -66,8 +66,9 @@ void convert()
      // convert to an int and map to the screen height:
      inByte= int(inString);
      println(inByte);
-     inByte = map(inByte, -12, 12, 0, height);
-    }
+     //inByte = map(inByte,-512, 512, 0, height);
+     inByte = map(inByte,0, 1023, 0, height);    
+  }
 }
 
 
